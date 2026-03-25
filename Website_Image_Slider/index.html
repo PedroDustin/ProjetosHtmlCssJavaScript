@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- ROYAL TUTORIALS -->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <!-- Link to CSS File -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Fontawesome Icons Offline -->
+     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/all.css">
+</head>
+<body>
+    <div class="container">
+        <div class="slide">
+            <div class="item" style="background-image: url(images/img1.png);">
+                <div class="content">
+                    <div class="name">Australia</div>
+                    <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, atque.</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/img2.png);">
+                <div class="content">
+                    <div class="name">Egito</div>
+                    <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quae?</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/img3.png);">
+                <div class="content">
+                    <div class="name">Kalahari</div>
+                    <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nulla!</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/img4.png);"> 
+                <div class="content">
+                    <div class="name">Dubai</div>
+                    <div class="about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, sint.</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/img5.png);">
+                <div class="content">
+                    <div class="name">Kenya</div>
+                    <div class="about">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, explicabo.</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(images/img6.png);"> 
+                <div class="content">
+                    <div class="name">Auckland</div>
+                    <div class="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, fugiat?</div>
+                    <button>Explore Mais</button>
+                </div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="prev">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="next">
+                <i class="fas fa-arrow-right"></i>
+            </button></div>
+    </div>
+
+    
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').appendChild(items[0]);
+        });
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            /* para pegar o numero de todos os itens = 6 */
+            document.querySelector('.slide').prepend(items[items.length - 1]);
+        });
+
+
+       
+    </script>
+    <a href="javascript:history.back()" class="back-btn">← Voltar</a>
+</body>
+</html>
